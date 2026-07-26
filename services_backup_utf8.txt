@@ -1,0 +1,9 @@
+﻿
+> {"step_index":146,"source":"MODEL","type":"PLANNER_RESPONSE","status":"DONE","created_at":"2026-06-17T06:54:38Z","too
+l_calls":[{"name":"run_command","args":{"CommandLine":"\"powershell -Command \\\"Get-Content C:\\\\Users\\\\Aditya\\\\.
+gemini\\\\antigravity\\\\brain\\\\831786fc-ecc1-4ece-bc82-15ba85e45c11\\\\.system_generated\\\\logs\\\\overview.txt | 
+Select-String 'const TornPaperEdge' -Context 0, 450 > d:\\\\Projects\\\\SMG\\\\services_backup.txt\\\"\"","Cwd":"\"d:\\
+\\Projects\\\\SMG\"","SafeToAutoRun":"true","WaitMsBeforeAsync":"500","toolAction":"\"Extracting Services.tsx from 
+log\"","toolSummary":"\"Log extraction\""}}]}
+
+
