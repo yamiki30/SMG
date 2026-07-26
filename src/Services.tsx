@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { ChevronRight, Calendar, MessageCircle, Wrench, Shield, ShieldCheck, MapPin, Download, Phone, Settings, Activity, FileText, BookOpen, HelpCircle, Lightbulb } from 'lucide-react';
+import { useState } from 'react';
+import { Wrench, Shield, ShieldCheck, MapPin, Download, Phone, FileText, BookOpen, HelpCircle, Lightbulb } from 'lucide-react';
 
 const serviceTabs = {
   booking: {

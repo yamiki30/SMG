@@ -13,7 +13,7 @@ const categories = [
   { name: 'Apparel', image: '/accessories/air filter.jpeg' },
 ];
 
-export default function ShopDropdown({ isVisible, onMouseEnter, onMouseLeave }) {
+export default function ShopDropdown({ isVisible, onMouseEnter, onMouseLeave }: { isVisible: boolean; onMouseEnter: () => void; onMouseLeave: () => void }) {
   useEffect(() => {
     categories.forEach(category => {
       const img = new Image();

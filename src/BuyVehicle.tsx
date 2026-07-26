@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 const BuyVehicle = () => {
   const [filter, setFilter] = useState<'motorcycles' | 'scooters'>('motorcycles');

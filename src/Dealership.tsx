@@ -1,5 +1,4 @@
-import { Calculator, FileText, ShieldCheck, Box, Network, TrendingUp, MapPin, Mail, Clock, Send } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Calculator, FileText, ShieldCheck, Box, Network, TrendingUp, MapPin, Mail, Clock } from 'lucide-react';
 
 export default function Dealership() {
   return (

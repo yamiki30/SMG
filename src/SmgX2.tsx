@@ -91,7 +91,7 @@ export default function SmgX2() {
       </section>
 
       {/* Design Philosophy */}
-      <section ref={el => sectionsRef.current[0] = el} className="py-[160px] px-6 md:px-[80px] bg-[#0e0e0e]">
+      <section ref={(el) => { sectionsRef.current[0] = el; }} className="py-[160px] px-6 md:px-[80px] bg-[#0e0e0e]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="relative group overflow-hidden">
             <div className="absolute -inset-4 border border-[#afc7f8]/20 scale-95 group-hover:scale-100 transition-transform duration-700"></div>
@@ -134,7 +134,7 @@ export default function SmgX2() {
       </section>
 
       {/* Technology: Core of Power */}
-      <section ref={el => sectionsRef.current[1] = el} className="py-[160px] px-6 md:px-[80px] bg-[#131313] overflow-hidden">
+      <section ref={(el) => { sectionsRef.current[1] = el; }} className="py-[160px] px-6 md:px-[80px] bg-[#131313] overflow-hidden">
         <div className="text-center mb-24">
           <h2 className="font-['Montserrat'] font-bold text-[48px] text-[#e5e2e1] mb-6 uppercase">CORE OF POWER</h2>
           <div className="w-24 h-1 bg-[#afc7f8] mx-auto"></div>
@@ -149,7 +149,7 @@ export default function SmgX2() {
       </section>
 
       {/* Gallery Grid */}
-      <section ref={el => sectionsRef.current[2] = el} className="py-[160px] px-6 md:px-[80px] bg-[#0e0e0e]">
+      <section ref={(el) => { sectionsRef.current[2] = el; }} className="py-[160px] px-6 md:px-[80px] bg-[#0e0e0e]">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[800px]">
           <div className="md:col-span-8 relative overflow-hidden group min-h-[300px]">
             <img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTpGDQERLsHVDYpM61fvj7psth9QDEutXYpyd18baVnxdnRfF-wqebuHnQDwcxrxbSOjMFvjY9kMvcTulSJ3ChPhQLVq9CPv6e-asnC6D9NAqPhho16vFKRbFaj0kFDhPlyI1B9SigLWNF0CR8uG2UdpowE38AwiMAPrlJBTuMzWoOLefK_M1AwkbrwD80stWiPymO9VNcF7-vG4PfqyJlekV3KZNCaGAN5QWcAcKPXMqhpPhsD2K5UY4hQlalBAzo1V-c8UYf3BgE" alt="Gallery" />
@@ -179,7 +179,7 @@ export default function SmgX2() {
       </section>
 
       {/* Accessories */}
-      <section ref={el => sectionsRef.current[3] = el} className="py-[160px] px-6 md:px-[80px]">
+      <section ref={(el) => { sectionsRef.current[3] = el; }} className="py-[160px] px-6 md:px-[80px]">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-xl">
             <p className="font-['Inter'] font-semibold text-[12px] tracking-[0.1em] text-[#afc7f8] uppercase mb-4">ACCESSORIES</p>
@@ -217,7 +217,7 @@ export default function SmgX2() {
       </section>
 
       {/* Final CTA */}
-      <section ref={el => sectionsRef.current[4] = el} className="py-[160px] px-6 md:px-[80px] bg-[#afc7f8] text-[#131313] text-center">
+      <section ref={(el) => { sectionsRef.current[4] = el; }} className="py-[160px] px-6 md:px-[80px] bg-[#afc7f8] text-[#131313] text-center">
         <h2 className="font-['Montserrat'] text-[32px] md:text-[80px] leading-[40px] md:leading-[90px] font-bold uppercase mb-8 tracking-[-0.02em]">Ready to join the revolution?</h2>
         <p className="font-['Inter'] text-[18px] leading-[28px] mb-12 max-w-2xl mx-auto opacity-90">Experience the future of performance motorcycling. Customise your X2 and be among the first to own the ultimate streetfighter.</p>
         <button className="bg-[#131313] text-[#e5e2e1] font-semibold text-[12px] uppercase px-16 py-6 tracking-[0.1em] hover:scale-105 transition-all duration-300 shadow-2xl">

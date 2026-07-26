@@ -91,7 +91,7 @@ export default function SmgX1() {
       </header>
 
       {/* ── PRODUCT SHOWCASE ── */}
-      <section ref={(el) => (sectionsRef.current[0] = el)} className="py-[160px] px-6 md:px-[80px] bg-[#131313]">
+      <section ref={(el) => { sectionsRef.current[0] = el; }} className="py-[160px] px-6 md:px-[80px] bg-[#131313]">
         <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
           <div className="relative group">
             <div className="absolute -inset-10 bg-[#afc7f8]/5 blur-[100px] rounded-full group-hover:bg-[#afc7f8]/10 transition-all duration-1000"></div>
@@ -124,7 +124,7 @@ export default function SmgX1() {
       </section>
 
       {/* ── ENGINEERING MASTERY ── */}
-      <section ref={(el) => (sectionsRef.current[1] = el)} className="py-[160px] bg-[#0e0e0e] overflow-hidden">
+      <section ref={(el) => { sectionsRef.current[1] = el; }} className="py-[160px] bg-[#0e0e0e] overflow-hidden">
         <div className="px-6 md:px-[80px] max-w-[1440px] mx-auto">
           <div className="flex flex-col items-center text-center mb-16">
             <span className="font-['Inter'] font-semibold text-[12px] text-[#afc7f8] tracking-[0.2em] uppercase mb-4">The Heart of the Machine</span>
@@ -167,7 +167,7 @@ export default function SmgX1() {
       </section>
 
       {/* ── ADVENTURE BANNER ── */}
-      <section ref={(el) => (sectionsRef.current[2] = el)} className="relative h-[60vh] w-full flex items-center justify-center overflow-hidden">
+      <section ref={(el) => { sectionsRef.current[2] = el; }} className="relative h-[60vh] w-full flex items-center justify-center overflow-hidden">
         <img
           className="absolute inset-0 w-full h-full object-cover"
           src="https://lh3.googleusercontent.com/aida/AP1WRLt1MRcKju9XFfp8f-sqODkszp6M_ChxN3egxdjAd26Rg3uYkKfQS3xH2kWt8QHeMTKOJ4xOutGwwDTdz5BxmYl6mJkq5N-qvcFUsNfzzAEedD_ktYymD9n6SLMR0vkiDQt_TqcAkgpxbVUXIqTDTUKmKxfqaTk5Wxori_gJ4i1wuGasUDBd5hUSVo4Z8Kxh1Q-ASBxy-wGDi10pc7RXcjEvqRzINYIBsLWssyk0sn7Cdv02Qj4TiCnjs8hS"
@@ -183,7 +183,7 @@ export default function SmgX1() {
       </section>
 
       {/* ── ACCESSORIES BENTO GRID ── */}
-      <section ref={(el) => (sectionsRef.current[3] = el)} className="py-[160px] px-6 md:px-[80px] bg-[#131313]">
+      <section ref={(el) => { sectionsRef.current[3] = el; }} className="py-[160px] px-6 md:px-[80px] bg-[#131313]">
         <div className="max-w-[1440px] mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
             <div>
@@ -252,7 +252,7 @@ export default function SmgX1() {
       </section>
 
       {/* ── CALL TO ACTION ── */}
-      <section ref={(el) => (sectionsRef.current[4] = el)} className="py-[160px] px-6 md:px-[80px] bg-[#1f3861] text-[#8ba2d1] relative overflow-hidden">
+      <section ref={(el) => { sectionsRef.current[4] = el; }} className="py-[160px] px-6 md:px-[80px] bg-[#1f3861] text-[#8ba2d1] relative overflow-hidden">
         <div className="max-w-[1440px] mx-auto flex flex-col items-center text-center relative z-10">
           <h2 className="font-['Montserrat'] font-bold text-[32px] md:text-[64px] text-white leading-tight mb-8 uppercase">Ready for your next expedition?</h2>
           <p className="font-['Inter'] text-[18px] leading-[28px] text-[#afc7f8] max-w-2xl mb-12">

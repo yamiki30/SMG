@@ -25,12 +25,12 @@ export default function TiltedCard({
   imageInitialScale = 1,
   imageTargetScale = 1,
   imageTransitionDuration = 4
-}) {
+}: any) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-10%" });
 
-  const x = useMotionValue();
-  const y = useMotionValue();
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
   const rotateX = useSpring(useMotionValue(0), springValues);
   const rotateY = useSpring(useMotionValue(0), springValues);
   const scale = useSpring(1, springValues);
@@ -43,10 +43,10 @@ export default function TiltedCard({
 
   const [lastY, setLastY] = useState(0);
 
-  function handleMouse(e) {
+  function handleMouse(e: any) {
     if (!ref.current) return;
 
-    const rect = ref.current.getBoundingClientRect();
+    const rect = (ref.current as any).getBoundingClientRect();
     const offsetX = e.clientX - rect.left - rect.width / 2;
     const offsetY = e.clientY - rect.top - rect.height / 2;
 

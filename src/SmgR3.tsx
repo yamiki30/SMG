@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 
 export default function SmgR3() {
   const containerRef = useRef<HTMLDivElement>(null);

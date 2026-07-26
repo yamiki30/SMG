@@ -4,8 +4,6 @@ import { gsap } from 'gsap';
 import './PillNav.css';
 
 const PillNav = ({
-  logo,
-  logoAlt = 'Logo',
   items,
   activeHref,
   className = '',
@@ -16,18 +14,16 @@ const PillNav = ({
   pillTextColor,
   onMobileMenuClick,
   initialLoadAnimation = true
-}) => {
+}: any) => {
   const resolvedPillTextColor = pillTextColor ?? baseColor;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const circleRefs = useRef([]);
-  const tlRefs = useRef([]);
-  const activeTweenRefs = useRef([]);
-  const logoImgRef = useRef(null);
-  const logoTweenRef = useRef(null);
-  const hamburgerRef = useRef(null);
-  const mobileMenuRef = useRef(null);
-  const navItemsRef = useRef(null);
-  const logoRef = useRef(null);
+  const circleRefs = useRef<any[]>([]);
+  const tlRefs = useRef<any[]>([]);
+  const activeTweenRefs = useRef<any[]>([]);
+      const hamburgerRef = useRef<any>(null);
+  const mobileMenuRef = useRef<any>(null);
+  const navItemsRef = useRef<any>(null);
+  const logoRef = useRef<any>(null);
 
   useEffect(() => {
     const layout = () => {
@@ -119,7 +115,7 @@ const PillNav = ({
     return () => window.removeEventListener('resize', onResize);
   }, [items, ease, initialLoadAnimation]);
 
-  const handleEnter = i => {
+  const handleEnter = (i: number) => {
     const tl = tlRefs.current[i];
     if (!tl) return;
     activeTweenRefs.current[i]?.kill();
@@ -130,7 +126,7 @@ const PillNav = ({
     });
   };
 
-  const handleLeave = i => {
+  const handleLeave = (i: number) => {
     const tl = tlRefs.current[i];
     if (!tl) return;
     activeTweenRefs.current[i]?.kill();
@@ -141,18 +137,7 @@ const PillNav = ({
     });
   };
 
-  const handleLogoEnter = () => {
-    const img = logoImgRef.current;
-    if (!img) return;
-    logoTweenRef.current?.kill();
-    gsap.set(img, { rotate: 0 });
-    logoTweenRef.current = gsap.to(img, {
-      rotate: 360,
-      duration: 0.2,
-      ease,
-      overwrite: 'auto'
-    });
-  };
+  
 
   const toggleMobileMenu = () => {
     const newState = !isMobileMenuOpen;
@@ -205,7 +190,7 @@ const PillNav = ({
     onMobileMenuClick?.();
   };
 
-  const isExternalLink = href =>
+  const isExternalLink = (href: string) =>
     href.startsWith('http://') ||
     href.startsWith('https://') ||
     href.startsWith('//') ||
@@ -213,9 +198,9 @@ const PillNav = ({
     href.startsWith('tel:') ||
     href.startsWith('#');
 
-  const isRouterLink = href => href && !isExternalLink(href);
+  const isRouterLink = (href: string) => href && !isExternalLink(href);
 
-  const cssVars = {
+  const cssVars: any = {
     ['--base']: baseColor,
     ['--pill-bg']: pillColor,
     ['--hover-text']: hoveredPillTextColor,
@@ -228,7 +213,7 @@ const PillNav = ({
 
         <div className="pill-nav-items desktop-only" ref={navItemsRef}>
           <ul className="pill-list" role="menubar">
-            {items.map((item, i) => (
+            {items.map((item: any, i: any) => (
               <li key={item.label} role="none">
                 {isRouterLink(item.href) ? (
                   <Link
@@ -313,7 +298,7 @@ const PillNav = ({
 
       <div className="mobile-menu-popover mobile-only" ref={mobileMenuRef} style={cssVars}>
         <ul className="mobile-menu-list">
-          {items.map((item, i) => (
+          {items.map((item: any) => (
             <li key={item.label}>
               {isRouterLink(item.href) ? (
                 <Link

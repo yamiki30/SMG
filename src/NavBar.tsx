@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, Search, Headphones, User, ChevronDown, X } from 'lucide-react';
+import { Menu, Search, Headphones, User, X } from 'lucide-react';
 import PillNav from './PillNav';
 import ShopDropdown from './ShopDropdown';
 
@@ -9,7 +9,7 @@ export default function NavBar() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [internalTheme, setInternalTheme] = useState<'dark' | 'light'>('dark');
   const [isShopDropdownVisible, setIsShopDropdownVisible] = useState(false);
-  const shopTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const shopTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const location = useLocation();
 
   const handleShopMouseEnter = () => {
